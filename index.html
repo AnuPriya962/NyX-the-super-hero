@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NyX — Listen · Guide · Protect</title>
+<meta name="description" content="NyX listens. Tell her what happened and she'll help you work out what to do.">
+<meta name="theme-color" content="#080405">
+<meta property="og:title" content="NyX — Listen · Guide · Protect">
+<meta property="og:description" content="Raised by a warrior and a witch. Sworn to neither. Tell NyX what happened.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23B87C72' d='M12 1.5l1.5 6.9 6.9 1.5-6.9 1.5L12 18.3l-1.5-6.9L3.6 9.9l6.9-1.5z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip" href="#top">Skip to content</a>
+
+<!-- ══════════ NAV ══════════ -->
+<nav class="nav" id="nav">
+  <a href="#top" class="brand" aria-label="NyX">
+    <svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5l1.5 6.9 6.9 1.5-6.9 1.5L12 18.3l-1.5-6.9L3.6 9.9l6.9-1.5L12 1.5z"/></svg>
+    NyX
+  </a>
+  <div class="nav-right">
+    <button class="nav-link" id="navTalk">Talk to me</button>
+    <span class="nav-state" id="navState" aria-live="polite">Story</span>
+    <button class="theme-toggle" id="themeToggle" aria-label="Switch between dark and light">☾</button>
+  </div>
+</nav>
+
+<!-- ══════════ LEFT — NYX ══════════ -->
+<div class="character-pane" id="characterPane">
+  <div class="environment" aria-hidden="true">
+    <div class="eclipse"></div>
+    <svg class="skyline" viewBox="0 0 400 300" preserveAspectRatio="none">
+      <path d="M0 300 L0 210 L18 150 L30 205 L52 195 L60 120 L72 196 L96 186 L112 96 L126 186 L150 200 L164 140 L178 202 L206 190 L220 108 L236 192 L262 200 L276 152 L290 204 L318 194 L332 126 L346 198 L370 206 L384 164 L400 210 L400 300 Z"/>
+    </svg>
+    <div class="ground-mist"></div>
+    <div class="seam"></div>
+  </div>
+
+  <div class="stage" id="stage">
+    <div class="view-track" id="track">
+      <figure class="view" data-view="front">
+        <img src="assets/images/pose-front.png" alt="NyX seen from the front: black armour under an oxblood cloak, horned headpiece, a sword held low at her side" draggable="false">
+      </figure>
+      <figure class="view" data-view="back">
+        <img src="assets/images/pose-back.png" alt="NyX seen from behind: the full oxblood cloak falling from her shoulders, headpiece above the hood" draggable="false">
+      </figure>
+    </div>
+  </div>
+
+  <div class="view-controls">
+    <button class="arrow" id="viewPrev" aria-label="Previous view">
+      <svg viewBox="0 0 12 18" aria-hidden="true"><path d="M9.5 1L2 9l7.5 8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <div class="view-meta">
+      <span class="view-name" id="viewName" aria-live="polite">Front</span>
+      <span class="view-count"><i class="dot on"></i><i class="dot"></i></span>
+    </div>
+    <button class="arrow" id="viewNext" aria-label="Next view">
+      <svg viewBox="0 0 12 18" aria-hidden="true"><path d="M2.5 1L10 9l-7.5 8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+  </div>
+</div>
+
+<noscript>
+  <p class="no-js">This page needs JavaScript to reach NyX. Please enable it and reload.</p>
+</noscript>
+
+<!-- ══════════ RIGHT — STORY / SANCTUARY ══════════ -->
+<main class="content-pane" id="top">
+
+  <div class="story" id="story">
+
+    <section class="frag frag-open">
+      <h1>NyX</h1>
+      <p class="lede">I was raised by a warrior and a witch.<br>I belong to neither.</p>
+      <p class="sub">I listen before I move. I read a room before I speak. When something is wrong, I stand between it and the people it would touch.</p>
+      <button class="talk-btn open-now" id="talkBtnTop">
+        <span>Tell me what happened</span>
+        <svg viewBox="0 0 16 10" fill="none" aria-hidden="true"><path d="M1 5h14M15 5l-4.5-4M15 5l-4.5 4" stroke="currentColor" stroke-width="1.3"/></svg>
+      </button>
+      <p class="enter-note">I'm listening.</p>
+    </section>
+
+    <section class="frag">
+      <h2>Where I came from</h2>
+      <div class="parent-row">
+        <h3>Father</h3>
+        <p class="sub">My father was a warrior with a stillness that never betrayed him. He taught me to watch first, move second, and never mistake force for strength.</p>
+      </div>
+      <div class="parent-row">
+        <h3>Mother</h3>
+        <p class="sub">My mother was a witch who read people the way others read weather. She gave me the old language of minds, shadows, and the quiet pull of time.</p>
+      </div>
+      <blockquote class="pull">When you carry both a blade and a spell, you learn the difference between power and restraint.</blockquote>
+    </section>
+
+    <section class="frag">
+      <h2>What I can do</h2>
+      <p class="sub">Six disciplines. One purpose. Nothing offered for display.</p>
+      <ul class="powers">
+        <li data-open="false">
+          <button class="p-head" aria-expanded="false">Warrior <i>+</i></button>
+          <div class="p-body">I trained until steel and instinct became one motion. My blade does not answer lightly; it answers only when I ask it to.</div>
+        </li>
+        <li data-open="false">
+          <button class="p-head" aria-expanded="false">Mind <i>+</i></button>
+          <div class="p-body">I can hear a thought before it is spoken. I resist the urge. Your mind remains yours, and I honour that.</div>
+        </li>
+        <li data-open="false">
+          <button class="p-head" aria-expanded="false">Shadow <i>+</i></button>
+          <div class="p-body">Darkness bends for me into walls, roads, and hiding places. Most people never notice it moved, and that is exactly how I prefer it.</div>
+        </li>
+        <li data-open="false">
+          <button class="p-head" aria-expanded="false">Time <i>+</i></button>
+          <div class="p-body">I can slow a moment and study it without losing myself in it. I cannot undo what is done. Time keeps its receipts, and so do I.</div>
+        </li>
+        <li data-open="false">
+          <button class="p-head" aria-expanded="false">Aegis <i>+</i></button>
+          <div class="p-body">An old word for a shield. Mine is not metal. It is a promise: nothing reaches you without crossing me first.</div>
+        </li>
+        <li data-open="false">
+          <button class="p-head" aria-expanded="false">Truthsense <i>+</i></button>
+          <div class="p-body">I taste a lie before it finishes. It makes me hard to deceive and, I would admit, harder to lie near.</div>
+        </li>
+      </ul>
+
+      <div class="law">
+        <span class="law-tag">On time</span>
+        <p>I can walk the river of time, but not drink it backward. What is done remains done. I work on what comes next.</p>
+      </div>
+      <div class="law">
+        <span class="law-tag">On minds</span>
+        <p>I could rewrite what you think. I never will. Your choices are still yours. That is the heart of protecting anyone at all.</p>
+      </div>
+    </section>
+
+    <section class="frag frag-last">
+      <h2>Why I do it</h2>
+      <blockquote>Power is useful only when it helps someone.<br>Everything else is just noise.</blockquote>
+      <p class="sub">The strength in my blood was never a lesson plan. It was a burden, and a choice. I made the vow myself.</p>
+      <p class="creed">Listen · Guide · Protect</p>
+      <p class="sub mission-line">When someone cannot name what hurts, I wait. When they can, I help them find the next step. And if harm comes for them, it must meet me first.</p>
+    </section>
+  </div>
+
+  <footer>
+    <div>© 2026 NyX Help Portal</div>
+    <div>A fictional superhero experience created for the TechAscent Machine Test.</div>
+  </footer>
+</main>
+
+<!-- ══════════ THE SANCTUARY — an overlay over the page ══════════ -->
+<div class="scrim" id="scrim" hidden></div>
+
+<aside class="sanctuary" id="sanctuary" role="dialog" aria-modal="true"
+       aria-labelledby="sanctuaryTitle" hidden>
+  <div class="channel-rule" aria-hidden="true"></div>
+
+  <div class="sanctuary-head">
+    <h2 id="sanctuaryTitle">I'm listening.</h2>
+    <p class="sub">Say it however it comes out. Take as long as you need.</p>
+    <button class="close-btn" id="closeBtn" aria-label="Close the conversation">✕</button>
+  </div>
+
+  <div class="terminal" role="region" aria-label="Conversation with NyX">
+    <header class="t-head">
+      <img src="assets/images/nyx-avatar.jpg" alt="" aria-hidden="true">
+      <span class="t-title">NyX <em>//</em> Sanctuary</span>
+      <span class="t-status" id="tStatus" aria-label="Status">connecting</span>
+    </header>
+
+    <div class="t-log" id="log" role="log" aria-live="polite" aria-label="Conversation"></div>
+
+    <form class="t-entry" id="entry">
+      <span class="caret" aria-hidden="true">&gt;</span>
+      <textarea id="field" rows="1" placeholder="Type your answer" aria-label="Your reply to NyX"></textarea>
+      <button type="button" class="done-btn" id="finish" hidden disabled>Finish</button>
+      <button type="submit" id="send" aria-label="Send">↵</button>
+    </form>
+    <p class="t-hint" id="entryHint"></p>
+    <p class="t-error" id="err" role="alert"></p>
+  </div>
+
+</aside>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
